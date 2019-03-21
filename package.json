@@ -25,7 +25,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0",
+    "@babel/runtime": "^7.4.2",
     "@saeris/graphql-scalars": "^1.0.1",
     "apollo-datasource": "^0.1.2",
     "apollo-datasource-rest": "^0.1.1",
