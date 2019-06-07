@@ -1866,10 +1866,10 @@ aws-sdk@^*, aws-sdk@^2.228.0:
     uuid "3.1.0"
     xml2js "0.4.19"
 
-aws-sdk@^2.341.0:
-  version "2.341.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.341.0.tgz#56fcbd8d6bbade746c9c781f71df0a99ff0de407"
-  integrity sha512-S0jtg8ZkxPdNIH4cSz8XQykVpPtNTAsw9LvU10IkWAucSE2JTNjqbbRBBl3wawGJ+79fJC0hwomSAyUOgYrKMA==
+aws-sdk@^2.471.0:
+  version "2.471.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.471.0.tgz#08d9ad6fe7216ee4c7c4ea99d7e66b33d9e07930"
+  integrity sha512-c7e1939Nep03xLyN+qV1uzzotxYVqtcj+5x87C1s3qOPSG7aSVIbtJfcu4RUdtsKty5qUef6muJ6ohNMRYrW6g==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -1878,7 +1878,7 @@ aws-sdk@^2.341.0:
     querystring "0.2.0"
     sax "1.2.1"
     url "0.10.3"
-    uuid "3.1.0"
+    uuid "3.3.2"
     xml2js "0.4.19"
 
 aws-sign2@~0.7.0:
@@ -10406,15 +10406,15 @@ uuid@3.1.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
   integrity sha512-DIWtzUkw04M4k3bf1IcpS2tngXEL26YUD2M0tMDUpnUrz2hgzUBlD55a4FjdLGPvfHxS6uluGWvaVEqgBcVa+g==
 
+uuid@3.3.2, uuid@^3.1.0, uuid@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
+  integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
+
 uuid@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
   integrity sha1-Z+LoY3lyFVMN/zGOW/nc6/1Hsho=
-
-uuid@^3.1.0, uuid@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
-  integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
 
 v8flags@^3.0.0, v8flags@^3.1.1:
   version "3.1.1"
