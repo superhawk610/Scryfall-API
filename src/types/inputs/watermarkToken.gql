@@ -1,4 +1,0 @@
-input WatermarkToken {
-  watermark: Watermarks!
-  include: Boolean = true
-}

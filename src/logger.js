@@ -1,6 +1,6 @@
-import Winston, { format } from "winston"
+import Winston, { format } from 'winston';
 
-const { combine, colorize, timestamp, printf } = format
+const { combine, colorize, timestamp, printf } = format;
 
 Winston.configure({
   format: combine(
@@ -10,34 +10,31 @@ Winston.configure({
   ),
   transports: [
     new Winston.transports.Console({
-      level:
-        process.env.ENV === `production`
-          ? `error`
-          : process.env.LOGLEVEL || `debug`
-    })
-  ]
-})
+      level: process.env.ENV === 'production' ? 'error' : process.env.LOGLEVEL || 'debug',
+    }),
+  ],
+});
 
 Winston.debug = (...args) => {
   for (const arg of args) {
-    Winston.log(`debug`, arg)
+    Winston.log('debug', arg);
   }
-}
+};
 
 Winston.info = (...args) => {
   for (const arg of args) {
-    Winston.log(`info`, arg)
+    Winston.log('info', arg);
   }
-}
+};
 
 Winston.warn = (...args) => {
   for (const arg of args) {
-    Winston.log(`warn`, arg)
+    Winston.log('warn', arg);
   }
-}
+};
 
 Winston.error = (...args) => {
   for (const arg of args) {
-    Winston.log(`error`, arg)
+    Winston.log('error', arg);
   }
-}
+};

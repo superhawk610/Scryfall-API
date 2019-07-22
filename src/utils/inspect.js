@@ -1,11 +1,11 @@
-import { inspect } from "util"
-import { info } from "winston"
+import { inspect } from 'util';
+import { info } from 'winston';
 
-export const inspectObj = obj => inspect(obj, false, null, true)
-export const logObj = obj => obj |> inspectObj |> info
-export const tapObj = (label = ``) => obj => {
-  obj |> inspectObj |> (x => info(...(label ? [label, x] : [x])))
-  return obj
-}
+export const inspectObj = obj => inspect(obj, false, null, true);
+export const logObj = obj => info(inspectObj(obj));
+export const tapObj = (label = '') => obj => {
+  info(...(label ? [label, inspectObj(obj)] : inspectObj(obj)));
+  return obj;
+};
 
-export default inspectObj
+export default inspectObj;

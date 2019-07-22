@@ -1,4 +1,0 @@
-input SubtypeToken {
-  type: [Subtypes!]!
-  include: Boolean = true
-}

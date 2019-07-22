@@ -1,4 +1,0 @@
-input IdentityToken {
-  identity: Identities!
-  comparison: Operators = "is"
-}

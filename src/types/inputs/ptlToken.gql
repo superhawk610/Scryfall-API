@@ -1,4 +1,0 @@
-input PTLToken {
-  value: String!
-  comparison: Operators = "eq"
-}

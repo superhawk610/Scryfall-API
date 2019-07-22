@@ -1,65 +1,16 @@
-import { makeExecutableSchema } from "graphql-tools"
-import {
-  GraphQLDateDirective,
-  GraphQLNumberDirective,
-  GraphQLCurrencyDirective,
-  GraphQLLowerCaseDirective,
-  GraphQLUpperCaseDirective,
-  GraphQLCamelCaseDirective,
-  GraphQLStartCaseDirective,
-  GraphQLCapitalizeDirective,
-  GraphQLKebabCaseDirective,
-  GraphQLTrimDirective,
-  GraphQLDefaultToDirective,
-  GraphQLToLowerDirective,
-  GraphQLToUpperDirective,
-  GraphQLTemplateDirective,
-  applySchemaCustomDirectives
-} from "graphql-custom-directives"
-import CustomScalars from "@saeris/graphql-scalars"
-import * as types from "./types"
-import * as enums from "./types/enums"
-import * as inputs from "./types/inputs"
-//import * as interfaces from "./types/interfaces"
-import * as unions from "./types/unions"
-import * as resolvers from "./resolvers"
+import { join } from 'path';
+import { importSchema } from 'graphql-import';
+import { makeExecutableSchema } from 'graphql-tools';
+
+import { DateTime } from '@saeris/graphql-scalars';
+import * as resolvers from './resolvers';
 
 export const schema = makeExecutableSchema({
-  typeDefs: [
-    ...Object.values(types),
-    ...Object.values(enums),
-    ...Object.values(inputs),
-    ...Object.values(unions),
-    ...CustomScalars.keys()
-  ],
+  typeDefs: importSchema(join(__dirname, 'types', 'query.graphql')),
   resolvers: {
-    ...CustomScalars.values(),
-    ...resolvers
+    ...resolvers,
+    DateTime,
   },
-  resolverValidationOptions: {
-    requireResolversForResolveType: false
-  },
-  inheritResolversFromInterfaces: true
-})
+});
 
-const directives = [
-  GraphQLDateDirective,
-  GraphQLNumberDirective,
-  GraphQLCurrencyDirective,
-  GraphQLLowerCaseDirective,
-  GraphQLUpperCaseDirective,
-  GraphQLCamelCaseDirective,
-  GraphQLStartCaseDirective,
-  GraphQLCapitalizeDirective,
-  GraphQLKebabCaseDirective,
-  GraphQLTrimDirective,
-  GraphQLDefaultToDirective,
-  GraphQLToLowerDirective,
-  GraphQLToUpperDirective,
-  GraphQLTemplateDirective
-]
-
-schema._directives.push(...directives)
-applySchemaCustomDirectives(schema)
-
-export default schema
+export default schema;

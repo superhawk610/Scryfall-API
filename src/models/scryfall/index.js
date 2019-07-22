@@ -1,2 +1,2 @@
-export { Card } from "./card"
-export { Set } from "./set"
+export { Card } from './card';
+export { Set } from './set';

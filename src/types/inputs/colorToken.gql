@@ -1,4 +1,0 @@
-input ColorToken {
-  color: [Colors!]!
-  comparison: Operators = "is"
-}

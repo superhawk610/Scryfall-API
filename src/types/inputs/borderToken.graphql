@@ -1,0 +1,5 @@
+input BorderToken {
+  border: [Borders]!
+  combine: Boolean # FIXME: = false
+  include: Boolean # FIXME: = true
+}

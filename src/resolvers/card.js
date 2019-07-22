@@ -1,4 +1,4 @@
 export const set = ({ set: code }, _, { dataSources }) =>
-  dataSources.Scryfall.setByCode({ code })
+  dataSources.Scryfall.setByCode({ code });
 
-export const faces = parent => ({ card: parent, ...parent.card_faces })
+export const faces = parent => ({ card: parent, ...parent.card_faces });

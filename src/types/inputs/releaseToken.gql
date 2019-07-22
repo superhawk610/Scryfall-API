@@ -1,4 +1,0 @@
-input ReleaseToken {
-  date: String!
-  comparison: Operators = "eq"
-}

@@ -1,4 +1,0 @@
-input SupertypeToken {
-  type: [Supertypes!]!
-  include: Boolean = true
-}

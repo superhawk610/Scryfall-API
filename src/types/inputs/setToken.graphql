@@ -1,0 +1,6 @@
+input SetToken {
+  code: [String]!
+  scope: PrintingScopes # FIXME: = "Set"
+  combine: Boolean # FIXME: = false
+  include: Boolean # FIXME: = true
+}

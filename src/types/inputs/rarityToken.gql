@@ -1,4 +1,0 @@
-input RarityToken {
-  rarity: Rarities!
-  comparison: Operators = "eq"
-}

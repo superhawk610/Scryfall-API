@@ -1,0 +1,26 @@
+# import * from 'unions/_all.graphql'
+# import * from 'enums/_all.graphql'
+# import * from 'inputs/_all.graphql'
+
+# import * from 'card.graphql'
+# import * from 'face.graphql'
+# import * from 'legality.graphql'
+# import * from 'list.graphql'
+# import * from 'set.graphql'
+
+scalar DateTime
+
+type Query {
+  "Used to retrieve a single Card by its Scryfall ID."
+  card(id: ID!): Card!
+  "Used to retrieve a single Set by its Set Code."
+  set(code: ID!): Set!
+
+  "Returns a paginated List of All Cards."
+  cards: List!
+  "Returns a List of all Sets."
+  sets(filter: SetFilter): List!
+
+  "Returns a list of Cards that fit the supplied search criteria."
+  searchCards(query: Search!, page: Int): List!
+}

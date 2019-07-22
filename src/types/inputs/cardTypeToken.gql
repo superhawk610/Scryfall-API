@@ -1,5 +1,0 @@
-input CardTypeToken {
-  type: [CardTypes!]!
-  combine: Boolean = false
-  include: Boolean = true
-}

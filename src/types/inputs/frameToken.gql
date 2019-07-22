@@ -1,5 +1,0 @@
-input FrameToken {
-  frame: [Frames]!
-  combine: Boolean = false
-  include: Boolean = true
-}
