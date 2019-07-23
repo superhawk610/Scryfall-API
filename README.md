@@ -10,7 +10,13 @@
 
 ## Usage
 
-TODO :sunglasses:
+Coming soon :sunglasses:
+
+## TODO
+
+- [ ] copy over `*.graphql` during build step
+- [ ] pull configuration from env for customizing deployments
+- [ ] Docker?
 
 ## License
 
