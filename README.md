@@ -1,9 +1,17 @@
-<h1 align="center" style="text-align: center;">Scryfall API</h1>
+<h3 align="center" style="text-align: center;">Scryfall API</h1>
+<br />
 <p align="center">
   <img width="600" src="assets/scryfall-apollo.png" />
 </p>
-<p align="center">A <strong>self-contained</strong> GraphQL API wrapper for Scryfall built with <a href="https://www.apollographql.com/docs/apollo-server/features/data-sources.html">Apollo Data Sources</a>. Forked away from serverless; originally by [Saeris](https://github.com/Saeris/Scryfall-API).</p>
+<br />
+<p align="center">A <strong>self-contained</strong> GraphQL API wrapper for Scryfall built with <a href="https://www.apollographql.com/docs/apollo-server/features/data-sources.html">Apollo Data Sources</a>.</p>
+<p align="center">Forked away from serverless by <a href="https://github.com/superhawk610">me</a>; originally by <a href="https://github.com/Saeris/Scryfall-API">Saeris</a>.</p>
+<br />
 
-## 🥂 License
+## Usage
+
+TODO :sunglasses:
+
+## License
 
 Released under the [MIT license](https://github.com/Saeris/Scryfall-API/blob/master/LICENSE.md).
