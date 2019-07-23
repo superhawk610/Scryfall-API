@@ -80,6 +80,14 @@ type Card {
   "The localized type line printed on this card, if any."
   printedType: String
 
+  # Pricing
+  "Pricing information"
+  prices: Prices!
+
+  # Images
+  "Card images in various sizes/formats"
+  images: Images!
+
   # Faces
   faces: [Face!]
 }

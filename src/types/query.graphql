@@ -7,6 +7,8 @@
 # import * from 'legality.graphql'
 # import * from 'list.graphql'
 # import * from 'set.graphql'
+# import * from 'prices.graphql'
+# import * from 'images.graphql'
 
 scalar DateTime
 

@@ -1,0 +1,19 @@
+type Images {
+  "146px x 204px JPG, suitable for thumbnails"
+  small: String!
+
+  "488px x 680px JPG, suitable for most applications"
+  normal: String!
+
+  "672px x 936px JPG, great for retina displays and zoomable views"
+  large: String!
+
+  "PNG reprensation of the `large` image"
+  png: String!
+
+  "Tight crop on the card's artwork, great for background/accent images"
+  art_crop: String!
+
+  "Tighter crop on the whole card, opting for square corners in favor of rounded"
+  border_crop: String!
+}
