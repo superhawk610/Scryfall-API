@@ -9,7 +9,7 @@ export class Scryfall extends RESTDataSource {
     return new ScryfallModels.Card(card);
   };
 
-  cards = async ({ page = 1, ...params }) => {
+  cards = async ({ page = 1, ...params } = {}) => {
     const { data, ...rest } = await this.get(`cards`, { page, ...params });
 
     return {
@@ -19,7 +19,7 @@ export class Scryfall extends RESTDataSource {
     };
   };
 
-  cardsBySet = async ({ code, page = 1, ...params }) => {
+  cardsBySet = async ({ code, page = 1, ...params } = {}) => {
     const { data, ...rest } = await this.get(`cards/search`, {
       q: `set:${code}`,
       page,
