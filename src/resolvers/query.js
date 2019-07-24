@@ -4,7 +4,10 @@ export const card = (parent, { id }, { dataSources }) =>
 export const set = (parent, { code }, { dataSources }) =>
   dataSources.Scryfall.setByCode({ code });
 
-export const cards = (parent, args, { dataSources }) => dataSources.Scryfall.cards();
+export const cards = (parent, args, { dataSources }) =>
+  dataSources.Scryfall.searchCards({ q: 'lang:en' });
+
+export const allCards = (parent, args, { dataSources }) => dataSources.Scryfall.cards();
 
 export const sets = async (parent, { filter }, { dataSources }) => {
   const { data, ...results } = await dataSources.Scryfall.sets();

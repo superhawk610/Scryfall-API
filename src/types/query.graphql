@@ -19,6 +19,8 @@ type Query {
   set(code: ID!): Set!
 
   "Returns a paginated List of All Cards."
+  allCards: List!
+  "Returns a paginated List of All English Cards."
   cards: List!
   "Returns a List of all Sets."
   sets(filter: SetFilter): List!
