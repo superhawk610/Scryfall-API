@@ -21,6 +21,8 @@ export class Card {
     printed_name,
     printed_text,
     printed_type_line,
+    image_uris,
+    card_faces = [],
     ...rest
   }) {
     this.oracleId = oracle_id;
@@ -61,6 +63,12 @@ export class Card {
     this.printedName = printed_name;
     this.printedText = printed_text;
     this.printedType = printed_type_line;
+
+    let images = image_uris;
+    if (!images && card_faces && card_faces.length) {
+      images = card_faces[0].image_uris;
+    }
+    this.images = images || [];
 
     for (const [prop, value] of Object.entries(rest)) {
       this[prop] = value;

@@ -30,4 +30,8 @@ type Face {
   printedText: String
   "The localized type line printed on this face, if any."
   printedType: String
+
+  # Images
+  "Card images in various sizes/formats"
+  images: Images!
 }
