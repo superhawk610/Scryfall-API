@@ -14,13 +14,11 @@ const server = new ApolloServer({
   introspection: isDev,
   playground: isDev
     ? {
-        tabs: [
-          { endpoint: 'http://localhost:1337', query: defaultQuery, name: 'cardById' },
-        ],
+        tabs: [{ endpoint: process.env.ENDPOINT, query: defaultQuery, name: 'cardById' }],
       }
     : false,
 });
 
 server
-  .listen({ port: 1337 })
+  .listen({ port: process.env.PORT })
   .then(({ url }) => console.log(`🚀  Server ready at ${url}`));
