@@ -7,7 +7,9 @@ export const faces = parent =>
     : [];
 
 export const printings = async ({ id, name }, _, { dataSources }) => {
-  const { data } = await dataSources.Scryfall.searchCards({ q: `!"${name}"` });
+  const { data } = await dataSources.Scryfall.searchCards({
+    q: `!"${name}" unique:prints`,
+  });
   return data.map(c => ({
     ...c,
     duplicate: c.id === id,
