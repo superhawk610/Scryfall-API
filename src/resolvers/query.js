@@ -1,6 +1,9 @@
 export const card = (parent, { id }, { dataSources }) =>
   dataSources.Scryfall.cardById({ id });
 
+export const rulings = (parent, { id }, { dataSources }) =>
+  dataSources.Scryfall.rulingsByCard({ id });
+
 export const set = (parent, { code }, { dataSources }) =>
   dataSources.Scryfall.setByCode({ code });
 
@@ -101,7 +104,6 @@ export const searchCards = async (parent, { query, page }, { dataSources }) => {
       return q;
     }, '')
     .toLowerCase();
-  console.log(q);
   const results = await dataSources.Scryfall.searchCards({ q, page });
   return { page, ...results };
 };

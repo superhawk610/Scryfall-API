@@ -1,4 +1,8 @@
 export const __resolveType = ({ object }) => {
-  if (object === 'card') return 'Card';
-  if (object === 'set') return 'Set';
+  switch (object) {
+    case 'card':
+      return 'Card';
+    case 'set':
+      return 'Set';
+  }
 };

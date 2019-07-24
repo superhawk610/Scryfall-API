@@ -7,6 +7,7 @@
 # import * from 'face.graphql'
 # import * from 'legality.graphql'
 # import * from 'list.graphql'
+# import * from 'ruling.graphql'
 # import * from 'set.graphql'
 # import * from 'prices.graphql'
 # import * from 'images.graphql'
@@ -25,6 +26,8 @@ type Query {
   cards: List!
   "Returns a List of all Sets."
   sets(filter: SetFilter): List!
+  "Returns a List of all Rulings for the given card."
+  rulings(id: ID!): [Ruling!]!
 
   "Returns a list of Cards that fit the supplied search criteria."
   searchCards(query: Search!, page: Int): List!

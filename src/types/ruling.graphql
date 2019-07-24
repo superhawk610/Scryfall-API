@@ -1,0 +1,10 @@
+type Ruling {
+  "A unique ID for this ruling's oracle identity."
+  oracleId: ID!
+  "Where this ruling originates from."
+  source: String!
+  "When this ruling was published."
+  publishedAt: DateTime!
+  "The ruling's content."
+  content: String!
+}

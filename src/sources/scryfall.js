@@ -33,6 +33,12 @@ export class Scryfall extends RESTDataSource {
     };
   };
 
+  rulingsByCard = async ({ id } = {}) => {
+    const { data } = await this.get(`cards/${id}/rulings`);
+
+    return data.map(ruling => new ScryfallModels.Ruling(ruling));
+  };
+
   setByCode = async ({ code, ...params }) => {
     const set = await this.get(`sets/${code}`, params);
     return new ScryfallModels.Set(set);
