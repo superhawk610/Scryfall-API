@@ -14,7 +14,7 @@ Coming soon :sunglasses:
 
 ## TODO
 
-- [ ] copy over `*.graphql` during build step
+- [x] copy over `*.graphql` during build step
 - [ ] pull configuration from env for customizing deployments
 - [ ] Docker?
 
