@@ -1,5 +1,11 @@
 "https://scryfall.com/docs/reference#sets"
 input Search {
+  "Exact card name (case-insensitive)"
+  name: ExactTextToken
+
+  "How to handle duplicate results (default: 'cards')"
+  unique: Uniques
+
   color: [ColorToken!]
   identity: [IdentityToken!]
   supertype: [SupertypeToken!]
@@ -31,6 +37,5 @@ input Search {
   frame: [FrameToken!]
   releaseDate: [ReleaseToken!]
   reprint: ToggleToken
-  unique: ToggleToken
   language: [LanguageToken!]
 }

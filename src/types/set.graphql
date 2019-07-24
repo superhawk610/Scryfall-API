@@ -18,6 +18,8 @@ type Set {
   cards(page: Int): List!
   "True if this set was only released on Magic Online."
   digital: Boolean!
-  "	True if this set contains only foil cards."
+  "True if this set contains only foil cards."
   foil: Boolean!
+  "Link to an SVG of this set's icon. Download and store this as the URL may change without notice."
+  icon: String!
 }

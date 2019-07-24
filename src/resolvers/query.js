@@ -80,6 +80,14 @@ export const searchCards = async (parent, { query, page }, { dataSources }) => {
         );
       }
 
+      if (typeof terms === 'string') {
+        return concatTokens(`${token}:${terms}`);
+      }
+
+      if (terms.exact) {
+        return concatTokens(`!"${terms.exact}"`);
+      }
+
       if (terms[0].comparison) {
         return concatTokens(
           terms.map(buildCompareToken(tokens[token] || token)).join(' ')
@@ -93,6 +101,7 @@ export const searchCards = async (parent, { query, page }, { dataSources }) => {
       return q;
     }, '')
     .toLowerCase();
+  console.log(q);
   const results = await dataSources.Scryfall.searchCards({ q, page });
   return { page, ...results };
 };

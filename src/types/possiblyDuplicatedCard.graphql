@@ -1,7 +1,11 @@
 """
 [Cards](https://scryfall.com/docs/api/cards)
 """
-type Card {
+type PossiblyDuplicatedCard {
+  # Unique Fields
+  "True if this card is the same as the parent."
+  duplicate: Boolean!
+
   # Core Fields
   "A unique ID for this card in Scryfall’s database."
   id: ID!
@@ -91,8 +95,4 @@ type Card {
   # Faces
   "Front and back faces (if this card has a back)"
   faces: [Face!]
-
-  # Printings
-  "All printings of this card (performs an additional request)"
-  printings: [PossiblyDuplicatedCard!]
 }

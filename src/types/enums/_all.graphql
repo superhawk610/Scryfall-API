@@ -16,4 +16,5 @@
 # import * from 'setTypes.graphql'
 # import * from 'subtypes.graphql'
 # import * from 'supertypes.graphql'
+# import * from 'uniques.graphql'
 # import * from 'watermarks.graphql'

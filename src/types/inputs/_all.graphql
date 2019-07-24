@@ -2,6 +2,7 @@
 # import * from 'cardTypeToken.graphql'
 # import * from 'cmcToken.graphql'
 # import * from 'colorToken.graphql'
+# import * from 'exactTextToken.graphql'
 # import * from 'formatToken.graphql'
 # import * from 'frameToken.graphql'
 # import * from 'identityToken.graphql'

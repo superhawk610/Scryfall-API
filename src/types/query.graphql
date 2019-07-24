@@ -2,6 +2,7 @@
 # import * from 'enums/_all.graphql'
 # import * from 'inputs/_all.graphql'
 
+# import * from 'possiblyDuplicatedCard.graphql'
 # import * from 'card.graphql'
 # import * from 'face.graphql'
 # import * from 'legality.graphql'
