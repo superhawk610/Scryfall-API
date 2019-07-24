@@ -1,13 +1,13 @@
 type Prices {
   "Daily price for this card, in USD"
-  usd: String!
+  usd: String
 
   "Daily price for this card in foil (if available), in USD"
-  usd_foil: String!
+  usd_foil: String
 
   "Daily price for this card, in EUR"
-  eur: String!
+  eur: String
 
   "Daily price for this card on MTGO, in tix"
-  tix: String!
+  tix: String
 }
